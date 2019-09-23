@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chatbot</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400i,700i|Rubik:300,400,600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+        <div class="row" id="header">
+            <div class="col-12">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h1>Meet<br><span class="h1-bold">Erica</span></h1>
+                <h2>In this activity, you will “chat” with Erica -- a fictional high school student -- by playing the role of her counselor. Erica is a 16-year-old junior whom you met once at the beginning of the school year, and whose attendance has been declining.</h2>
+                <h2>You’ll each take turns contributing to the conversation. After Erica says or asks something, you’ll be provided with three possible responses. Choose the response that demonstrates you are listening to Erica and trying to understand her life from her perspective. This skill is also known as empathy and is an important element of establishing trust. I’ll offer some feedback on your choices and identify basic listening skills as we go along.</h2>
+                <h2>Here's Erica:</h2>
+            </div>
+        </div>
+        <div class="row round" id="round-1">
+            <div class="col-6 offset-3">
+                <div class="erica">
+                    <div class="bubble-erica">
+                        <p>I know, I know, I’ve been missing classes. It’s just this is literally my fourth school since freshman year and I’m probably gonna have to move again next summer so it’s not like I’m gonna make any friends here anyway.</p>
+                    </div>
+                </div>
+                <div class="user">
+                    <h2 class="narrator">How would you reply?</h2>
+                    <h2 class="narrator hidden" id="response-bad1">Sounds like you’re concerned about Erica’s success. This response <span class="bold">confronts</span> her with potential negative consequences, which can lead to defensiveness and unwillingness to change the status quo. Try a different response that offers a <span class="bold">reflection</span> or restatement about what she might be concerned about here.</h2>
+                    <h2 class="narrator hidden" id="response-good">Good choice! You’re echoing what Erica’s telling you in a way that demonstrates that you understand what she’s feeling. This is called a <span class="bold">reflection</span>, and will help build trust and foster a sense of safety.</h2>
+                    <h2 class="narrator hidden" id="response-bad2">Here you’ve <span class="bold">directed</span>Erica to do what you think she should do, this puts you in a position of being an expert rather than a partner in thinking through her dilemma. Try a different response that offers a <span class="bold">reflection</span> or restatement about what she might be concerned about here.</h2>
+                    <div class="option" id="option-bad1" onclick="selectBad(1,1)">
+                        <p>Yes, well, keep this up and you’re not going to graduate either.</p>
+                    </div>
+                    <div class="option" id="option-good" onclick="selectGood(1)">
+                        <p>It sounds like you’re getting frustrated with changing schools so often.</p>
+                    </div>
+                    <div class="option" id="option-bad2" onclick="selectBad(1,2)">
+                        <p>Just go to more classes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row round hidden" id="round-2">
+            <div class="col-6 offset-3">
+                <div class="erica">
+                    <div class="bubble-erica">
+                        <p>Yeah, it’s the actual worst. Anyway, I just kinda wanna get through the school year without getting too wrapped with stuff here.</p>
+                    </div>
+                </div>
+                <div class="user">
+                    <h2 class="narrator">How would you reply?</h2>
+                    <h2 class="narrator hidden" id="response-good">Good supportive statement! This response shows sympathy and is <span class="bold">supportive</span> of Erica. Let’s see what she chooses to divulge… </h2>
+                    <h2 class="narrator hidden" id="response-bad1">You’ve chosen to <span class="bold">warn</span> Erica about negative consequences. Warnings generally produce defensiveness and will push Erica to argue against change. Try a supportive response.</h2>
+                    <h2 class="narrator hidden" id="response-bad2">You’ve chosen to <span class="bold">confront</span> Erica by criticizing her current behavior; this may deflate her sense of self-efficacy and produce defensiveness. Try a supportive response.</h2>
+                    <div class="option" id="option-good" onclick="selectGood(2)">
+                        <p>Oh that is the worst; really difficult.</p>
+                    </div>
+                    <div class="option" id="option-bad1" onclick="selectBad(2,1)">
+                        <p>You’re gonna flunk out with an attitude like that.</p>
+                    </div>
+                    <div class="option" id="option-bad2" onclick="selectBad(2,2)">
+                        <p>Isolating yourself isn’t really working for you now, is it?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
