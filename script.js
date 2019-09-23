@@ -1,5 +1,9 @@
+
+// // align erica portraits
+// d3.select('#round-1')
+
 function selectBad(round,option){
-    const user = d3.select(`#round-${round}`).select('.user');
+    const user = d3.select(`#round-${round}-user`).select('.user');
 
     // translate to speech bubble
     // replace if other bad option was previously chosen
@@ -25,7 +29,7 @@ function selectBad(round,option){
 }
 
 function selectGood(round){
-    const user = d3.select(`#round-${round}`).select('.user');
+    const user = d3.select(`#round-${round}-user`).select('.user');
 
     // translate to speech bubble
     // replace if bad option was previously chosen
@@ -54,5 +58,5 @@ function selectGood(round){
     // user.select('#response-good').classed('hidden',false);
 
     // show next round
-    d3.select(`#round-${round+1}`).classed('hidden',false);
+    d3.selectAll(`.round-${round+1}`).classed('hidden',false);
 }

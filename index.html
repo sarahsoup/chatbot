@@ -17,21 +17,37 @@
 
             </div>
         </div>
+        <div class="row" id="row-title">
+            <div class="col-1 offset-3">
+                <img src="./assets/erica.png" id="erica-full">
+            </div>
+            <div class="col-5">
+                <div class="flex">
+                    <h1>Meet<br><span class="h1-bold">Erica</span></h1>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-6 offset-3">
-                <h1>Meet<br><span class="h1-bold">Erica</span></h1>
                 <h2>In this activity, you will “chat” with Erica -- a fictional high school student -- by playing the role of her counselor. Erica is a 16-year-old junior whom you met once at the beginning of the school year, and whose attendance has been declining.</h2>
                 <h2>You’ll each take turns contributing to the conversation. After Erica says or asks something, you’ll be provided with three possible responses. Choose the response that demonstrates you are listening to Erica and trying to understand her life from her perspective. This skill is also known as empathy and is an important element of establishing trust. I’ll offer some feedback on your choices and identify basic listening skills as we go along.</h2>
                 <h2>Here's Erica:</h2>
             </div>
         </div>
-        <div class="row round" id="round-1">
-            <div class="col-6 offset-3">
+        <div class="row round round-1" id="round-1-erica">
+            <div class="col-1 offset-2">
+                <img src="./assets/erica_square.png" class="erica-square">
+            </div>
+            <div class="col-6">
                 <div class="erica">
                     <div class="bubble-erica">
                         <p>I know, I know, I’ve been missing classes. It’s just this is literally my fourth school since freshman year and I’m probably gonna have to move again next summer so it’s not like I’m gonna make any friends here anyway.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row round round-1" id="round-1-user">
+            <div class="offset-3 col-6">
                 <div class="user">
                     <h2 class="narrator">How would you reply?</h2>
                     <h2 class="narrator hidden" id="response-bad1">Sounds like you’re concerned about Erica’s success. This response <span class="bold">confronts</span> her with potential negative consequences, which can lead to defensiveness and unwillingness to change the status quo. Try a different response that offers a <span class="bold">reflection</span> or restatement about what she might be concerned about here.</h2>
@@ -49,13 +65,20 @@
                 </div>
             </div>
         </div>
-        <div class="row round hidden" id="round-2">
-            <div class="col-6 offset-3">
+        <div class="row round round-2 hidden" id="round-2-erica">
+            <div class="col-1 offset-2">
+                <img src="./assets/erica_square.png" class="erica-square">
+            </div>
+            <div class="col-5">
                 <div class="erica">
                     <div class="bubble-erica">
                         <p>Yeah, it’s the actual worst. Anyway, I just kinda wanna get through the school year without getting too wrapped with stuff here.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row round round-2 hidden" id="round-2-user">
+            <div class="col-6 offset-3">
                 <div class="user">
                     <h2 class="narrator">How would you reply?</h2>
                     <h2 class="narrator hidden" id="response-good">Good supportive statement! This response shows sympathy and is <span class="bold">supportive</span> of Erica. Let’s see what she chooses to divulge… </h2>
@@ -69,6 +92,130 @@
                     </div>
                     <div class="option" id="option-bad2" onclick="selectBad(2,2)">
                         <p>Isolating yourself isn’t really working for you now, is it?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row round round-3 hidden" id="round-3-erica">
+            <div class="col-1 offset-2">
+                <img src="./assets/erica_square.png" class="erica-square">
+            </div>
+            <div class="col-5">
+                <div class="erica">
+                    <div class="bubble-erica">
+                        <p>I don’t know, maybe it’s too late. I’ll just be better about going to classes at my next school, I guess.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row round round-3 hidden" id="round-3-user">
+            <div class="col-6 offset-3">
+                <div class="user">
+                    <h2 class="narrator">How would you reply?</h2>
+                    <h2 class="narrator hidden" id="response-good">Nice job raising concern with permission. This shows that you care about Erica and also support her autonomy by giving her a choice to hear your concerns.</h2>
+                    <h2 class="narrator hidden" id="response-bad1">You’ve chosen a closed question to gather a specific fact about Erica. This moves the conversation away from change and away from Erica’s primary concerns. Try a different response.</h2>
+                    <h2 class="narrator hidden" id="response-bad2">Here you have chosen to confront Erica to show that you think next time will be the same; you are taking an expert stance instead of being collaborative. Try a different method of bringing up your perspective that supports Erica’s autonomy in making choices.</h2>
+                    <div class="option" id="option-good" onclick="selectGood(3)">
+                        <p>I have some concerns about that plan -- do you mind if I share them?</p>
+                    </div>
+                    <div class="option" id="option-bad1" onclick="selectBad(3,1)">
+                        <p>Where are you moving next year?</p>
+                    </div>
+                    <div class="option" id="option-bad2" onclick="selectBad(3,2)">
+                        <p>But what makes you think next time is going to be any different?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row round round-4 hidden" id="round-4-erica">
+            <div class="col-1 offset-2">
+                <img src="./assets/erica_square.png" class="erica-square">
+            </div>
+            <div class="col-5">
+                <div class="erica">
+                    <div class="bubble-erica">
+                        <p>I don’t think I need advice. I’ve just always been bad at making friends, because... never mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row round round-4 hidden" id="round-4-user">
+            <div class="col-6 offset-3">
+                <div class="user">
+                    <h2 class="narrator">How would you reply?</h2>
+                    <h2 class="narrator hidden" id="response-good">Good=complex reflection! You’ve reflected Erica’s feelings of fear and concerns about confidentiality. A complex reflection both demonstrates your understanding of Erica’s experience and reflects the feelings beneath the surface of what she said . This skill helps you to  establish a sense of trust and safety.</h2>
+                    <h2 class="narrator hidden" id="response-bad1">Here you are choosing to confront Erica with a directive to tell you what is going on. This may make her feel defensive, closed-off and unlikely to make a change. Try a different response to help establish a feeling of safety.</h2>
+                    <h2 class="narrator hidden" id="response-bad2">Here you are giving advice without permission by telling Erica what to feel and what to do. . This response takes the expert stance and does not evoke Erica’s perspective. Try another response that shows you are listening to her concerns.</h2>
+                    <div class="option" id="option-bad1" onclick="selectBad(4,1)">
+                        <p>Look, I can’t help you unless you tell me what’s going on.</p>
+                    </div>
+                    <div class="option" id="option-bad2" onclick="selectBad(4,2)">
+                        <p>Don’t worry about your high school friends. Trust me, in about ten years you won’t even remember their names.</p>
+                    </div>
+                    <div class="option" id="option-good" onclick="selectGood(4)">
+                        <p>It sounds like you’re afraid that things you share with me are going to be heard by other people.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row round round-5 hidden" id="round-5-erica">
+            <div class="col-1 offset-2">
+                <img src="./assets/erica_square.png" class="erica-square">
+            </div>
+            <div class="col-5">
+                <div class="erica">
+                    <div class="bubble-erica">
+                        <p>Well, no offense to the school or anything but, like, going to school is exhausting to me.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row round round-5 hidden" id="round-5-user">
+            <div class="col-6 offset-3">
+                <div class="user">
+                    <h2 class="narrator">How would you reply?</h2>
+                    <h2 class="narrator hidden" id="response-good">Good! This response provides reflection followed by an open-ended question a.  These listening skills show you are willing to understand what she’s telling you.</h2>
+                    <h2 class="narrator hidden" id="response-bad1">Here you have directed Erica about what she should do.  Directions do not communicate that  you’re interested in what might be bothering her. Try a different response to see if you can find out more.</h2>
+                    <h2 class="narrator hidden" id="response-bad2">Here you are advising without permission -- see if you demonstrate you are listening to her by reflecting or evoking her perspective with an open-ended question.</h2>
+                    <div class="option" id="option-bad1" onclick="selectBad(5,1)">
+                        <p>You really need to sleep more.</p>
+                    </div>
+                    <div class="option" id="option-good" onclick="selectGood(5)">
+                        <p>I can imagine you’ve been under a lot of stress -- moving so many times must be taxing. What about going to school feels exhausting to you?</p>
+                    </div>
+                    <div class="option" id="option-bad2" onclick="selectBad(5,2)">
+                        <p>Why don’t you try some echinacea?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row round round-6 hidden" id="round-6-erica">
+            <div class="col-1 offset-2">
+                <img src="./assets/erica_square.png" class="erica-square">
+            </div>
+            <div class="col-5">
+                <div class="erica">
+                    <div class="bubble-erica">
+                        <p>I don’t know, I guess... it isn’t really about class... like, class is fine... I just don’t want to be there.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row round round-6 hidden" id="round-6-user">
+            <div class="col-6 offset-3">
+                <div class="user">
+                    <h2 class="narrator">How would you reply?</h2>
+                    <h2 class="narrator hidden" id="response-good">This was a good moment to provide a complex reflection to what Erica said, which demonstrates that you are listening. You then used an open-ended question to encourage her to share more about what is keeping her from attending class.</h2>
+                    <h2 class="narrator hidden" id="response-bad1">You have asked a closed question seeking facts or information. Try an open question to encourage Erica  to share more about her concerns.</h2>
+                    <h2 class="narrator hidden" id="response-bad2">You have chosen to confront Erica by suggesting she is the only one that struggles with going to school; this may  make her feel judged and defensive. You may be able to evoke more of Erica’s perspective with an open-ended question and a complex reflection.</h2>
+                    <div class="option" id="option-bad1" onclick="selectBad(6,1)">
+                        <p>How many times did you miss class this week?</p>
+                    </div>
+                    <div class="option" id="option-good" onclick="selectGood(6)">
+                        <p>It sounds like something that’s happening outside of class is affecting you when you’re in class. Tell me more about that.</p>
+                    </div>
+                    <div class="option" id="option-bad2" onclick="selectBad(6,2)">
+                        <p>No one wants to be there, but they all manage to get to class.</p>
                     </div>
                 </div>
             </div>
